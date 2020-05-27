@@ -18,12 +18,14 @@ var commentRoutes = require('./routes/comments'),
     indexRoutes = require('./routes/index')
 SeedDB = require('./seed')
 app.locals.moment = require('moment');
-mongoose.connect("mongodb://localhost:27017/yelp_camp_map", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+app.use(bodyParser.urlencoded({ extended: true }));
+mongoose.connect("mongodb+srv://hahunzyen:ajkg85@cluster0-o7xs3.mongodb.net/yeld_camp_map?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost:27017/yelp_camp_map", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 app.use(flash());
 app.use(express.static(__dirname + "/public"));
-app.use(bodyParser.urlencoded({ extended: true }));
+
 // SeedDB();
 //PASSPORT CONFIGURATION
 app.use(require('express-session')({
