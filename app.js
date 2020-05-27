@@ -19,8 +19,8 @@ var commentRoutes = require('./routes/comments'),
 SeedDB = require('./seed')
 app.locals.moment = require('moment');
 app.use(bodyParser.urlencoded({ extended: true }));
-mongoose.connect("mongodb+srv://hahunzyen:ajkg85@cluster0-o7xs3.mongodb.net/yeld_camp_map?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true });
-// mongoose.connect("mongodb://localhost:27017/yelp_camp_map", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+//mongoose.connect("mongodb+srv://hahunzyen:ajkg85@cluster0-o7xs3.mongodb.net/yeld_camp_map?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useUnifiedTopology: true });
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 app.use(flash());
