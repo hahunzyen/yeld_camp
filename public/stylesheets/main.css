@@ -1,0 +1,26 @@
+.card img {
+    width: 100%;
+}
+/* MAKE THE EDIT AND DELETE BUTOTN IN ONE LINE */
+.delete-form {
+    display: inline;
+}
+/* THIS MAKE A AREA FOR THE MAP */
+#map {
+    height:400px;
+    width: 100%;
+}
+/* THIS MAKE COMMENT BREAK LINE */
+.comments {
+     white-space: pre-wrap; 
+}
+.jumbotron {
+    background-image: url(https://images.unsplash.com/photo-1532260159992-05862a94e27f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+    background-size: cover;
+    background-position: 100% 80%;
+    background-repeat: no-repeat; 
+}
+.jumbotron h1, .jumbotron p {
+    color:white;
+    font-weight: 800px;
+}
